@@ -281,7 +281,7 @@ def sudo(client, message,redis):
 				Bot("sendMessage",{"chat_id":chatID,"text":r.Yrp.format(tx),"reply_to_message_id":message.id,"parse_mode":"html"})
 			else:
 				redis.hset("{}Nbot:stepSUDO".format(BOT_ID),userID,tx)
-				kb = InlineKeyboardMarkup([[InlineKeyboardButton(r.MoreInfo, url="t.me/zx_xx")]])
+				kb = InlineKeyboardMarkup([[InlineKeyboardButton(r.MoreInfo, url="t.me/FSFFF")]])
 				Bot("sendMessage",{"chat_id":chatID,"text":r.Sendreply % tx,"reply_to_message_id":message.id,"parse_mode":"html","reply_markup":kb})
 			
 
@@ -338,7 +338,7 @@ def sudo(client, message,redis):
 				Bot("sendMessage",{"chat_id":chatID,"text":r.Files,"reply_to_message_id":message.id,"parse_mode":"html","disable_web_page_preview":True,"reply_markup":kb})
 
 			if text == c.ADDfiles:
-				url = "https://raw.githubusercontent.com/TshAkEAb/TshakeV2-files/master/files"
+				url = "https://raw.githubusercontent.com/whatisnormalx/aldenay77-files/master/files"
 				req = requests.get(url).text
 				if not re.search(".py",req):
 					Bot("sendMessage",{"chat_id":chatID,"text":r.NOaddfiles,"reply_to_message_id":message.id,"disable_web_page_preview":True,"parse_mode":"html"})
@@ -359,25 +359,25 @@ def sudo(client, message,redis):
 				Files_U = ["tg.py","locks.py","rank.py","send.py"]
 				Files_B = ["bot.py","setup.py"]
 				for fnh in Files_H:
-					url = "https://raw.githubusercontent.com/TshAkEAb/TshakeV2/master/handlers/"+fnh
+					url = "https://raw.githubusercontent.com/whatisnormalx/aldenay77/master/handlers/"+fnh
 					out = requests.get(url).text
 					f = open("./handlers/"+fnh,"w+")
 					f.write(out)
 					f.close()
 				for fnu in Files_U:
-					url = "https://raw.githubusercontent.com/TshAkEAb/TshakeV2/master/utlis/"+fnu
+					url = "https://raw.githubusercontent.com/whatisnormalx/aldenay77/master/utlis/"+fnu
 					out = requests.get(url).text
 					f = open("./utlis/"+fnu,"w+")
 					f.write(out)
 					f.close()
 				for fnb in Files_B:
-					url = "https://raw.githubusercontent.com/TshAkEAb/TshakeV2/master/"+fnb
+					url = "https://raw.githubusercontent.com/whatisnormalx/aldenay77/master/"+fnb
 					out = requests.get(url).text
 					f = open("./"+fnb,"w+")
 					f.write(out)
 					f.close()
 				for fnu in Files_L:
-					url = "https://raw.githubusercontent.com/TshAkEAb/TshakeV2/master/lang/"+fnu
+					url = "https://raw.githubusercontent.com/whatisnormalx/aldenay77/master/lang/"+fnu
 					out = requests.get(url).text
 					f = open("./lang/"+fnu,"w+")
 					f.write(out)
